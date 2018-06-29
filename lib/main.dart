@@ -38,7 +38,8 @@ class LoginPageState extends State<LoginPage>
   }
 
   @override
-  Widget build(BuildContext context) {
+    Widget build(BuildContext context) {
+    //http请求
     var url = "http://192.168.40.8:8080/ajaxValidation.do";
     http.post(url, body: {"username": "admin", "password":"1","company":"1","checkCode":"1233"})
         .then((response) {
